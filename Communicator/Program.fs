@@ -4,6 +4,7 @@ Package https://github.com/r0otChiXor/Opium.Bitcoin.Communicator
 This is a standart process handler
 usage in .NET ----------------------------------------------------------
   var response = Opium.Communicator.FSharp.runProc(exeFile, command, directory);
+  returns a tuple: Item1 iEnumerable for response output, Item2 iEnumerable for errors
   For Bitcoin exefile=btc-cli.exe  (must have running node)
 *)
 
