@@ -124,10 +124,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Communicator\Opium.Communicator.FSharp.fsproj">
-      <Project>{0805a888-fd2b-45ff-8d95-384e00dd4e65}</Project>
-      <Name>Opium.Communicator.FSharp</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Opium.Communicator.CSharp\Opium.Communicator.CSharp.csproj">
       <Project>{ca5a90af-48a5-4a0b-9530-5f6fd6414a7e}</Project>
       <Name>Opium.Communicator.CSharp</Name>

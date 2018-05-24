@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using MahApps.Metro.Controls;
 
-
 namespace Opium.Shell
 {
     /// <summary>
@@ -143,7 +142,7 @@ namespace Opium.Shell
             var directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var exeFile = Path.Combine(directory ?? throw new InvalidOperationException(), "exe\\btcp-cli.exe");
             
-            var response = FSharp.runProc(exeFile, command, directory);
+            var response = CommunicatorFSharp.runProc(exeFile, command, directory);
 
             StringBuilder sb = new StringBuilder();
             foreach (var line in response.Item1)
