@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{61A49E41-5796-453D-ABF1-E1768899C870}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Opium.Process.Communicator</RootNamespace>
-    <AssemblyName>Opium.Process.Communicator</AssemblyName>
+    <RootNamespace>Opium.Shell</RootNamespace>
+    <AssemblyName>Opium.Shell</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
@@ -127,7 +128,10 @@
       <Project>{0805a888-fd2b-45ff-8d95-384e00dd4e65}</Project>
       <Name>Opium.Communicator.FSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Opium.Communicator.CSharp\Opium.Communicator.CSharp.csproj">
+      <Project>{ca5a90af-48a5-4a0b-9530-5f6fd6414a7e}</Project>
+      <Name>Opium.Communicator.CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

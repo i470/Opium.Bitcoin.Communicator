@@ -8,7 +8,7 @@ usage in .NET ----------------------------------------------------------
   For Bitcoin exefile=btc-cli.exe  (must have running node)
 *)
 
-module Opium.Communicator.FSharp
+module Opium.CommunicatorFSharp
 open System
 open System.Diagnostics
   
@@ -45,6 +45,6 @@ let runProc filename args startDir : seq<string> * seq<string> =
     p.BeginErrorReadLine()
     p.WaitForExit()
     timer.Stop()
-    outputs.Add(timer.ElapsedMilliseconds.ToString())
+    outputs.Add(timer.ElapsedMilliseconds.ToString()+" ms")
     let cleanOut l = l |> Seq.filter (fun o -> String.IsNullOrEmpty o |> not)
     cleanOut outputs,cleanOut errors

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Opium.Communicator.CSharp
 {
-    public static class Communicator
+    public static class RunProc
     {
         public static Task ExecuteCLICommandAsync(string exeLocation, string command, IProgress<string> progress)
         {

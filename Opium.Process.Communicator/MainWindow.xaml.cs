@@ -2,17 +2,15 @@
 using System.Reflection;
 using System.Windows;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using MahApps.Metro.Controls;
-using System.Windows.Threading;
-using static Opium.Communicator;
 
-namespace Opium.Process.Communicator
+
+namespace Opium.Shell
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -145,7 +143,8 @@ namespace Opium.Process.Communicator
             var directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var exeFile = Path.Combine(directory ?? throw new InvalidOperationException(), "exe\\btcp-cli.exe");
             
-            var response = Opium.Communicator.runProc(exeFile, command, directory);
+            var response = FSharp.runProc(exeFile, command, directory);
+
             StringBuilder sb = new StringBuilder();
             foreach (var line in response.Item1)
             {
