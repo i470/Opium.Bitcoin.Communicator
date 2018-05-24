@@ -8,7 +8,7 @@
     <ProjectGuid>0805a888-fd2b-45ff-8d95-384e00dd4e65</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Communicator</RootNamespace>
-    <AssemblyName>Opium.Communicator</AssemblyName>
+    <AssemblyName>Opium.Communicator.FSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.4.1.0</TargetFSharpCoreVersion>

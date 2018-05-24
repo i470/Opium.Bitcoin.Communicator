@@ -142,10 +142,10 @@ namespace Opium.Process.Communicator
             if (string.IsNullOrEmpty(command))
                 command = "getinfo";
 
-            var executableLocation = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var exeLocation = Path.Combine(executableLocation ?? throw new InvalidOperationException(), "exe\\btcp-cli.exe");
+            var directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var exeFile = Path.Combine(directory ?? throw new InvalidOperationException(), "exe\\btcp-cli.exe");
             
-            var response = Opium.Communicator.runProc(exeLocation, command, executableLocation);
+            var response = Opium.Communicator.runProc(exeFile, command, directory);
             StringBuilder sb = new StringBuilder();
             foreach (var line in response.Item1)
             {

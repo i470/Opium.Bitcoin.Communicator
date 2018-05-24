@@ -1,7 +1,13 @@
-﻿// Learn more about F# at http://fsharp.org
-// See the 'F# Tutorial' project for more help.
+﻿(* 
+@R0otChiXor 2018
+Package https://github.com/r0otChiXor/Opium.Bitcoin.Communicator
+This is a standart process handler
+usage in .NET ----------------------------------------------------------
+  var response = Opium.Communicator.FSharp.runProc(exeFile, command, directory);
+  For Bitcoin exefile=btc-cli.exe  (must have running node)
+*)
 
-module Opium.Communicator
+module Opium.Communicator.FSharp
 open System
 open System.Diagnostics
   
